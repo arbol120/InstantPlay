@@ -3,8 +3,10 @@ const mongoose = require('mongoose');
 const app = require('../index');
 const User = require('../models/User');
 
-// Base de datos en memoria para tests
-await mongoose.connect('mongodb://localhost:27017/gestor-productos-test');
+beforeAll(async () => {
+    await mongoose.connect('mongodb://localhost:27017/gestor-productos-test');
+});
+
 afterAll(async () => {
     await mongoose.connection.dropDatabase();
     await mongoose.connection.close();
