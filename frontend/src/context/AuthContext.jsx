@@ -6,7 +6,7 @@ export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    // Al montar, recuperar sesión del localStorage
+
     useEffect(() => {
         const token = localStorage.getItem('token');
         const role  = localStorage.getItem('role');

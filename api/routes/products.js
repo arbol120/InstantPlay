@@ -3,10 +3,7 @@ const Product = require('../models/Product');
 const { verifyToken, verifyAdmin } = require('../middleware/auth');
 const { validateProduct } = require('../middleware/validate');
 
-// ─────────────────────────────────────────────────────────────
-//  GET /api/products?page=1&limit=10&name=...&category=...&minPrice=...&maxPrice=...
-//  Paginación + filtros  (accesible para todos los usuarios autenticados)
-// ─────────────────────────────────────────────────────────────
+
 router.get('/', verifyToken, async (req, res, next) => {
     try {
         const page     = Math.max(1, parseInt(req.query.page)  || 1);

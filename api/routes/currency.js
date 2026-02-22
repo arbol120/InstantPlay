@@ -1,15 +1,14 @@
 const router = require('express').Router();
 const { verifyToken } = require('../middleware/auth');
 
-// GET /api/currency?amount=100&from=USD&to=MXN
-// Usa la API gratuita de exchangerate-api.com
+
 router.get('/', verifyToken, async (req, res, next) => {
     try {
         const amount = parseFloat(req.query.amount) || 1;
         const from   = (req.query.from || 'USD').toUpperCase();
         const to     = (req.query.to   || 'MXN').toUpperCase();
 
-        // API gratuita sin key (límite generoso para proyectos)
+        
         const url = `https://api.exchangerate-api.com/v4/latest/${from}`;
 
         const response = await fetch(url);
@@ -40,7 +39,7 @@ router.get('/', verifyToken, async (req, res, next) => {
     }
 });
 
-// GET /api/currency/rates?base=USD  — Lista todas las divisas disponibles
+
 router.get('/rates', verifyToken, async (req, res, next) => {
     try {
         const base = (req.query.base || 'USD').toUpperCase();

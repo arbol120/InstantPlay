@@ -1,4 +1,4 @@
-/* ─── Reset y Variables ─────────────────────────────────────── */
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -25,7 +25,7 @@ body {
     min-height: 100vh;
 }
 
-/* ─── Navbar ─────────────────────────────────────────────────── */
+
 .navbar {
     display: flex;
     align-items: center;
@@ -80,10 +80,9 @@ body {
 }
 .logout-btn:hover { background: var(--danger-h); }
 
-/* ─── Layout principal ───────────────────────────────────────── */
+
 .main-content { padding: 24px 20px; max-width: 1200px; margin: auto; }
 
-/* ─── Auth ───────────────────────────────────────────────────── */
 .auth-page {
     display: flex;
     justify-content: center;
@@ -124,7 +123,6 @@ body {
 .auth-card a { color: var(--accent); text-decoration: none; font-weight: 600; }
 .auth-card a:hover { text-decoration: underline; }
 
-/* ─── Inputs ──────────────────────────────────────────────────── */
 input, select, textarea {
     width: 100%;
     padding: 11px 14px;
@@ -140,7 +138,7 @@ input:focus, select:focus { border-color: var(--accent); }
 input::placeholder { color: var(--text-muted); }
 select option { background: var(--bg2); }
 
-/* ─── Botones ─────────────────────────────────────────────────── */
+
 .btn-primary {
     padding: 12px 20px;
     background: var(--primary);
@@ -186,7 +184,7 @@ select option { background: var(--bg2); }
 .btn-edit:hover   { background: #d4a017; }
 .btn-delete:hover { background: var(--danger-h); }
 
-/* ─── Alertas ─────────────────────────────────────────────────── */
+
 .alert {
     padding: 12px 16px;
     border-radius: var(--radius);
@@ -198,7 +196,7 @@ select option { background: var(--bg2); }
 .error-msg   { color: #ff7070; font-size: .9rem; }
 .success-msg { color: var(--accent); font-size: .9rem; }
 
-/* ─── Cards ───────────────────────────────────────────────────── */
+
 .card {
     background: var(--surface);
     backdrop-filter: blur(10px);
@@ -208,7 +206,7 @@ select option { background: var(--bg2); }
     margin-bottom: 20px;
 }
 
-/* ─── Productos Page ──────────────────────────────────────────── */
+
 .products-page { }
 
 .page-header {

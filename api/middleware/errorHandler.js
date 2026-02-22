@@ -11,7 +11,7 @@ function errorHandler(err, req, res, next) {
         });
     }
 
-    // Error de duplicado (ej: username único)
+    
     if (err.code === 11000) {
         return res.status(400).json({ message: 'Ya existe un registro con ese valor' });
     }
